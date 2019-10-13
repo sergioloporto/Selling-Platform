@@ -165,6 +165,7 @@
     color: var(--main-light-grey-color);
     font-size: 1.06em;
 }
+/********* Middle boxes **********/
 .middle-boxes {
     display: flex;
     flex-direction: column;
@@ -267,4 +268,130 @@
 }
 .middle-boxes__box3-right img {
     width: 85%;
+}
+.pricing-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.pricing {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.pricing-section h2 {
+    font-family: var(--font-raleway);
+    font-size: 2.25em;
+    margin: 70px 0;
+}
+.pricing__box {
+    border: 1px solid black;
+    width: 27%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 18px;
+    position: relative;
+}
+.pricing__box:not(:nth-of-type(2)) {
+    margin: 40px 0;
+    padding-bottom: 55px;
+}
+.pricing__box_basic {
+    border-color: var(--main-red-color);
+}
+.pricing__box_professional {
+    border-color: var(--main-blue-color);
+    box-shadow: 5px 10px 27px #07ACE629;
+}
+.pricing__box_premium {
+    border-color: var(--main-green-color);
+}
+.pricing-section h3 {
+    font-family: var(--font-raleway);
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #13253B;
+    margin-bottom: 30px;
+}
+.pricing-section p:nth-of-type(1) {
+    font-size: 2.85em;
+    margin-bottom: 20px;
+}
+.pricing__box_basic p:nth-of-type(1) {
+    color: var(--main-red-color);
+}
+.pricing__box_professional p:nth-of-type(1) {
+    color: var(--main-blue-color);
+}
+.pricing__box_premium p:nth-of-type(1) {
+    color: var(--main-green-color);
+}
+.pricing__box p:nth-of-type(2) {
+    font-family: var(--font-raleway);
+    font-size: .75em;
+    font-weight: 600;
+}
+.pricing__box ul li:not(:last-of-type){
+    margin-bottom: 15px;
+}
+.pricing__basic-features {
+    margin-top: 70px;
+}
+.pricing__professional-features {
+    margin-top: 80px;
+}
+.pricing__premium-features {
+    margin-top: 40px;
+}
+.pricing-feaure input[type="checkbox"]{
+    -webkit-appearance: initial;
+    appearance: initial;
+    width: 13px;
+    height: 13px;
+    border: 1px solid var(--main-green-color);
+    position: relative;
+    margin-right: 5px;
+}
+.pricing-feaure_notincluded input[type="checkbox"] {
+    border: 1px solid var(--main-red-color);
+}
+.pricing-feaure.pricing-feaure_notincluded input[type="checkbox"]:checked:after {
+    content: "\0078";
+    color: var(--main-red-color);
+}
+.pricing-feaure input[type="checkbox"]:checked {
+    background: white;
+}
+.pricing-feaure input[type="checkbox"]:checked:after {
+    content: "\2713";
+    color: var(--main-green-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.pricing__box-button {
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    color: white;
+    position: absolute;
+    bottom: -25px;
+    left: 115px;
+}
+.pricing__box-button_basic {
+    background-color: var(--main-red-color);
+}
+.pricing__box-button_professional {
+    background-color: var(--main-blue-color);
+}
+.pricing__box-button_premium {
+    background-color: var(--main-green-color);
 }
