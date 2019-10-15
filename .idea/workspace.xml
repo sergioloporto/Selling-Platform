@@ -19,6 +19,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -43,7 +44,9 @@
       <option name="presentableId" value="Default" />
       <updated>1570798418918</updated>
       <workItem from="1570798421146" duration="754000" />
-      <workItem from="1570799186888" duration="32158000" />
+      <workItem from="1570799186888" duration="36253000" />
+      <workItem from="1571121056569" duration="2048000" />
+      <workItem from="1571128779403" duration="5472000" />
     </task>
     <servers />
   </component>
@@ -55,7 +58,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
