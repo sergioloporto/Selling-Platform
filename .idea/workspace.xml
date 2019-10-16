@@ -4,7 +4,6 @@
     <list default="true" id="084c25d9-5268-467d-8c06-59d110186475" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +18,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Coderslab/WAR_FER_S_52_JavaScript" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -47,6 +46,7 @@
       <workItem from="1570799186888" duration="36253000" />
       <workItem from="1571121056569" duration="2048000" />
       <workItem from="1571128779403" duration="5472000" />
+      <workItem from="1571162811371" duration="1520000" />
     </task>
     <servers />
   </component>

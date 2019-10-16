@@ -488,10 +488,6 @@
 .any-questions input[type="checkbox"] {
     border: 1px solid var(--main-medium-grey-color);
 }
-/*.any-questions.pricing-feaure_notincluded input[type="checkbox"]:checked:after {*/
-/*    content: "\0078";*/
-/*    color: var(--main-red-color);*/
-/*}*/
 .any-questions input[type="checkbox"]:checked {
     background: white;
 }
@@ -507,8 +503,12 @@
     transform: translate(-50%,-50%);
     font-size: 2em;
 }
-
-
+img.email-address {
+    margin-right: 5px;
+}
+img.phone-number {
+    margin: 0 5px 0 30px;
+}
 
 
 
