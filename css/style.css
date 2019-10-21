@@ -30,6 +30,9 @@
 .header {
     background-color: var(--main-white-color);
 }
+button {
+    border: none;
+}
 /****   ********** NAVBAR ************/
 .navbar {
     height: 70px;

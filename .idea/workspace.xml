@@ -18,7 +18,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Coderslab/WAR_FER_S_52_JavaScript" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,7 +46,9 @@
       <workItem from="1570799186888" duration="36253000" />
       <workItem from="1571121056569" duration="2048000" />
       <workItem from="1571128779403" duration="5472000" />
-      <workItem from="1571162811371" duration="1520000" />
+      <workItem from="1571162811371" duration="2700000" />
+      <workItem from="1571223315089" duration="2029000" />
+      <workItem from="1571641112732" duration="898000" />
     </task>
     <servers />
   </component>
