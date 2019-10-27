@@ -1,4 +1,4 @@
-document.addEventLis1tener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
 
     const errorContainer = document.querySelector('.error-message');
     const numbersValidationMessage = "Ilość musi być większa niż 0. To pole może zawierać tylko liczby.";
