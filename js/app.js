@@ -1,14 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     const errorContainer = document.querySelector('.error-message');
-    const numbersValidationMessage = "Ilość musi być większa niż 0. To pole może zawierać tylko liczby.";
-    const ordersMonthValidationMessage = "Ilość zamówień musi być większa niż 0. To pole może zawierać tylko liczby.";
     const form = document.querySelector('form');
-    const quantity = form.elements[0];
-    const ordersMonth = form.elements[1];
-    const packageSelect = form.elements[2];
-    const accountingSelection = form.elements[3];
-    const terminalSelection = form.elements[4];
+    const quantity = document.querySelector('input[name=products-quantity]');
+    const ordersMonth = document.querySelector('input[name=orders-quantity]');
+    const packageSelect = document.querySelector('select[name=choose-package]');
+    const accountingSelection = document.querySelector('input[name=accounting]');
+    const terminalSelection = document.querySelector('input[name=terminal]');
+    // const terminalSelection = form.elements[4];
+    const numbersValidationMessage = quantity.dataset.errorText;
+    const ordersMonthValidationMessage = ordersMonth.dataset.errorText;
 
     const productsCalculationBox = document.querySelector('.pricing-calculator__prices-price_products');
     const monthlyOrdersCalculationBox = document.querySelector('.pricing-calculator__prices-price_orders');
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let totalPackage = 0;
 
 
-    quantity.addEventListener('change', function (event) {
+    quantity.addEventListener('input', function (event) {
         const quanitytyValue = quantity.value;
 
 
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             productsSum.innerText = "$";
             productsCalculation.innerText = "";
             productsCalculationBox.classList.add('hidden');
+            quantity.style.borderColor = "var(--main-red-color)";
             event.preventDefault();
         } else if (errorContainer) {
             event.preventDefault();
@@ -56,11 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
             productsCalculation.innerText = quanitytyValue + " * " + productPrice;
             totalQuantity = quanitytyValue * productPrice;
             productsSum.innerText = "$" + totalQuantity;
+            quantity.style.borderColor = "var(--main-blue-color)";
             return totalQuantity;
         }
     });
 
-    ordersMonth.addEventListener('change', function (event) {
+    ordersMonth.addEventListener('input', function (event) {
         const ordersMonthValue = ordersMonth.value;
         if (ordersMonthValue.includes('e') === true || ordersMonthValue < 1) {
             errorContainer.innerText = ordersMonthValidationMessage;
@@ -69,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ordersCalculation.innerText = "";
             monthlyOrdersCalculationBox.classList.add('hidden');
             event.preventDefault();
+            ordersMonth.style.borderColor = "var(--main-red-color)";
         } else if (errorContainer) {
             event.preventDefault();
             monthlyOrdersCalculationBox.classList.remove('hidden');
@@ -76,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ordersCalculation.innerText = ordersMonthValue + " * " + ordersPrice;
             totalMonthlyOrders = ordersMonthValue * ordersPrice;
             ordersSum.innerText = "$" + totalMonthlyOrders;
+            ordersMonth.style.borderColor = "var(--main-blue-color)";
             return totalMonthlyOrders;
         }
     });
@@ -130,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    form.addEventListener('change', function(){
+    form.addEventListener('change', function () {
         total.innerText = parseFloat(totalQuantity) + parseFloat(totalMonthlyOrders) + parseFloat(totalPackage) + parseFloat(totalAccounting) + parseFloat(totalTerminal);
         console.log(total.innerText);
         if (total.innerText > 0) {
@@ -139,5 +144,40 @@ document.addEventListener('DOMContentLoaded', function() {
             totalBox.classList.add('hidden');
         }
     });
+
+
+    function navbarToggle() {
+        const lt768px = window.matchMedia('(max-width: 768px)');
+        const navbar = document.querySelector('.navbar');
+
+        const burgerDiv = document.createElement("div");
+        burgerDiv.classList.add('burger');
+        burgerDiv.innerHTML = "          <div class=\"bar1\"></div>\n" +
+            "          <div class=\"bar2\"></div>\n" +
+            "          <div class=\"bar3\"></div>";
+
+        const navbarMenu = document.querySelector('.navbar__menu');
+        // const navbarButton = document.querySelector('.burger');
+
+        if (lt768px.matches === true) {
+            navbar.appendChild(burgerDiv);
+            burgerDiv.addEventListener('click', function () {
+                burgerDiv.classList.toggle("change");
+                navbarMenu.classList.toggle("navbar__menu_disappear");
+            });
+        } else {
+            if(burgerDiv){
+            burgerDiv.parentNode.removeChild(burgerDiv);
+            //     burgerDiv.remove();
+            }
+        }
+    }
+    navbarToggle();
+
+    document.addEventListener('resize', function () {
+        navbarToggle();
+    });
+
+
 });
 
