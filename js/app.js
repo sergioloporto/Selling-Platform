@@ -146,25 +146,51 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    function navbarToggle() {
-        const lt768px = window.matchMedia('(max-width: 768px)');
-        const burger = document.querySelector('.burger');
 
-        const navbarMenu = document.querySelector('.navbar__menu');
 
-        if (lt768px.matches === true) {
-            burger.addEventListener('click', function () {
-                burger.classList.toggle("change");
-                navbarMenu.classList.toggle("navbar__menu_disappear");
-            });
-        }
+    const lt768px = window.matchMedia('(max-width: 768px)');
+    const burger = document.querySelector('.burger');
+    const navbarMenu = document.querySelector('.navbar__menu');
+
+    const clickMenu = function() {
+        burger.classList.toggle("change");
+        navbarMenu.classList.toggle("navbar__menu_disappear");
+    };
+
+    if (lt768px.matches) {
+        burger.addEventListener('click', clickMenu);
+    } else {
+        burger.removeEventListener('click', clickMenu);
     }
-    navbarToggle();
 
-    window.addEventListener('resize', function () {
+    lt768px.addListener(function(lt768px) {
+        if (lt768px.matches) {
+            burger.addEventListener('click', clickMenu);
+        } else {
+            burger.removeEventListener('click', clickMenu);
+        }
+    })
 
-        navbarToggle();
-    });
+
+    // function navbarToggle() {
+    //     const lt768px = window.matchMedia('(max-width: 768px)');
+    //     const burger = document.querySelector('.burger');
+    //
+    //     const navbarMenu = document.querySelector('.navbar__menu');
+    //
+    //     if (lt768px.matches === true) {
+    //         burger.addEventListener('click', function () {
+    //             burger.classList.toggle("change");
+    //             navbarMenu.classList.toggle("navbar__menu_disappear");
+    //         });
+    //     }
+    // }
+    // navbarToggle();
+    //
+    // window.addEventListener('resize', function () {
+    //
+    //     navbarToggle();
+    // });
 
 
 });
