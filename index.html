@@ -28,6 +28,11 @@
           <li class="navbar__menu-item">Prices</li>
           <li class="navbar__menu-item">Contact</li>
         </ul>
+          <div class="burger">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+          </div>
       </nav>
       <section class="sellmore-section">
         <div class="sellmore-section__text">
@@ -107,47 +112,67 @@
         <section class="pricing-section">
           <h2>Pricing</h2>
           <div class="pricing">
-            <div class="pricing__box pricing__box_basic">
-              <h3>Basic</h3>
-              <p>$0</p>
-              <ul class="pricing__basic-features">
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>100 MB HDD</li>
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>1 Subdomain</li>
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>2 E-mails</li>
-                <li class="pricing-feaure pricing-feaure_notincluded"><input type="checkbox" checked disabled>Two years license</li>
-                <li class="pricing-feaure pricing-feaure_notincluded"><input type="checkbox" checked disabled>Full support</li>
-              </ul>
-              <button class="pricing__box-button pricing__box-button_basic" type="button">Begin</button>
-            </div>
+              <div class="pricing__box pricing__box_basic">
+                  <div class="pricing__box-uppersection">
+                      <h3>Basic</h3>
+                      <p>$0</p>
+                  </div>
+                  <div class="pricing__box-lowersection">
+                      <ul class="pricing__basic-features">
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>100 MB HDD</li>
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>1 Subdomain</li>
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>2 E-mails</li>
+                          <li class="pricing-feaure pricing-feaure_notincluded"><input type="checkbox" checked disabled>Two
+                              years license
+                          </li>
+                          <li class="pricing-feaure pricing-feaure_notincluded"><input type="checkbox" checked disabled>Full
+                              support
+                          </li>
+                      </ul>
+                  </div>
+                  <button class="pricing__box-button pricing__box-button_basic" type="button">Begin</button>
+              </div>
 
-            <div class="pricing__box pricing__box_professional">
-              <h3>Professional</h3>
-              <p>$25</p>
-              <p>Limited offer</p>
-              <ul class="pricing__professional-features">
+              <div class="pricing__box pricing__box_professional">
+                  <div class="pricing__box-uppersection">
+                      <h3>Professional</h3>
+                      <p>$25</p>
+                      <p>Limited offer</p>
+                  </div>
+                  <div class="pricing__box-lowersection">
+                      <ul class="pricing__professional-features">
+                          <li class="pricing-feaure css-checkbox"><input type="checkbox" checked disabled>500 MB HDD
+                          </li>
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>2 Subdomains</li>
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>5 E-mails</li>
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>One year license</li>
+                          <li class="pricing-feaure pricing-feaure_notincluded"><input type="checkbox" checked disabled>Full
+                              support
+                          </li>
+                      </ul>
+                  </div>
+                  <button class="pricing__box-button pricing__box-button_professional" type="button">Begin</button>
+              </div>
 
-                <li class="pricing-feaure css-checkbox"><input type="checkbox" checked disabled>500 MB HDD</li>
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>2 Subdomains</li>
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>5 E-mails</li>
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>One year license</li>
-                <li class="pricing-feaure pricing-feaure_notincluded"><input type="checkbox" checked disabled>Full support</li>
-              </ul>
-              <button class="pricing__box-button pricing__box-button_professional" type="button">Begin</button>
-            </div>
+              <div class="pricing__box pricing__box_premium">
+                  <div class="pricing__box-uppersection">
 
-            <div class="pricing__box pricing__box_premium">
-              <h3>Premium</h3>
-              <p>$60</p>
-              <p>Limited offer</p>
-              <ul class="pricing__premium-features">
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>2 GB HDD</li>
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>5 Subdomain</li>
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>20 E-mails</li>
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>Two years license</li>
-                <li class="pricing-feaure"><input type="checkbox" checked disabled>Full support</li>
-              </ul>
-              <button class="pricing__box-button pricing__box-button_premium" type="button">Begin</button>
-            </div>
+                      <h3>Premium</h3>
+                      <p>$60</p>
+                      <p>Limited offer</p>
+                  </div>
+                  <div class="pricing__box-lowersection">
+                      <ul class="pricing__premium-features">
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>2 GB HDD</li>
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>5 Subdomain</li>
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>20 E-mails</li>
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>Two years license</li>
+                          <li class="pricing-feaure"><input type="checkbox" checked disabled>Full support</li>
+                      </ul>
+                  </div>
+                  <button class="pricing__box-button pricing__box-button_premium" type="button">Begin</button>
+
+              </div>
         </div>
         </section>
         <section class="any-questions">
@@ -156,8 +181,8 @@
               <h2>Any questions?</h2>
               <p>Leave your email address or call us!</p>
               <div class="any-questions__form-box-contact-data any-questions__form-box-addresses">
-                <p class="emailaddressparagraph"><img class="email-address" src="img/Mail%20Icon.svg" ></img>info@bestshop.xyz</p>
-                <p class="phonenumberparagraph"><img class="phone-number" src="img/Phone%20Icon.svg"></img>123 456 789</p>
+                <p class="emailaddressparagraph"><img class="email-address" src="img/Mail%20Icon.svg" >info@bestshop.xyz</p>
+                <p class="phonenumberparagraph"><img class="phone-number" src="img/Phone%20Icon.svg">123 456 789</p>
               </div>
             </div>
 
@@ -177,10 +202,10 @@
             <form class="pricing-calculator__box pricing-calculator__input-boxes">
               <label for="quantity" class="displaynone">Products quantity</label>
               <input type="number" id="quantity" name="products-quantity" required
-                     minlength="4" maxlength="8" size="10" placeholder="Products quantity" data-error-text="Ilość musi być większa niż 0. To pole może zawierać tylko liczby.">
+                        placeholder="Products quantity" data-error-text="Ilość musi być większa niż 0. To pole może zawierać tylko liczby.">
               <label for="monthlyorders" class="displaynone">Estimated orders in month</label>
               <input type="number" id="monthlyorders" name="orders-quantity" required
-                     minlength="4" maxlength="8" size="10" placeholder="Estimated orders in month" data-error-text="Ilość zamówień musi być większa niż 0. To pole może zawierać tylko liczby.">
+                       placeholder="Estimated orders in month" data-error-text="Ilość zamówień musi być większa niż 0. To pole może zawierać tylko liczby.">
 
               <div class="package-selector">
 <!--                <img src="img/arrowdown.svg" class="arrowdown">-->

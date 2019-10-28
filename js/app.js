@@ -148,33 +148,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function navbarToggle() {
         const lt768px = window.matchMedia('(max-width: 768px)');
-        const navbar = document.querySelector('.navbar');
-
-        const burgerDiv = document.createElement("div");
-        burgerDiv.classList.add('burger');
-        burgerDiv.innerHTML = "          <div class=\"bar1\"></div>\n" +
-            "          <div class=\"bar2\"></div>\n" +
-            "          <div class=\"bar3\"></div>";
+        const burger = document.querySelector('.burger');
 
         const navbarMenu = document.querySelector('.navbar__menu');
-        // const navbarButton = document.querySelector('.burger');
 
         if (lt768px.matches === true) {
-            navbar.appendChild(burgerDiv);
-            burgerDiv.addEventListener('click', function () {
-                burgerDiv.classList.toggle("change");
+            burger.addEventListener('click', function () {
+                burger.classList.toggle("change");
                 navbarMenu.classList.toggle("navbar__menu_disappear");
             });
-        } else {
-            if(burgerDiv){
-            burgerDiv.parentNode.removeChild(burgerDiv);
-            //     burgerDiv.remove();
-            }
         }
     }
     navbarToggle();
 
-    document.addEventListener('resize', function () {
+    window.addEventListener('resize', function () {
+
         navbarToggle();
     });
 
