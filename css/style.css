@@ -67,6 +67,7 @@ button {
     display: flex;
     align-items: center;
     border-bottom: 4px solid transparent;
+    cursor: pointer;
 }
 .navbar__menu-item:hover {
     border-bottom: 4px solid var(--main-blue-color);
